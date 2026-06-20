@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshita Artistry</title>
+
+<style>
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #ffb3c6,
+        #cdb4db,
+        #a2d2ff,
+        #bde0fe
+    );
+    overflow-x:hidden;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:60px 20px 30px;
+}
+
+header h1{
+    font-size:4rem;
+    font-weight:700;
+    letter-spacing:3px;
+    text-shadow:0 0 15px rgba(255,255,255,0.5);
+}
+
+.tagline{
+    margin-top:15px;
+    font-size:1.2rem;
+    color:#2d1e2f;
+    font-weight:600;
+}
+
+/* STATUS BOX */
+
+.status-box{
+    width:320px;
+    margin:30px auto;
+    padding:14px;
+    border-radius:40px;
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(10px);
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.status-box::before{
+    content:"";
+    position:absolute;
+    left:-100%;
+    top:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #ff4d6d,
+        #7b2cbf,
+        #4cc9f0
+    );
+    animation:loading 3s linear infinite;
+    opacity:0.4;
+}
+
+.status-box span{
+    position:relative;
+    z-index:2;
+    font-weight:bold;
+    color:#111;
+}
+
+@keyframes loading{
+    100%{
+        left:100%;
+    }
+}
+
+/* GLIMPSES SECTION */
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-top:30px;
+    color:white;
+    text-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+    padding:50px 30px;
+}
+
+/* CARDS */
+
+.card{
+    width:300px;
+    height:340px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.5s;
+    box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card:hover{
+    transform:translateY(-15px) scale(1.05);
+}
+
+/* CARD CONTENT */
+
+.content{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.content h2{
+    font-size:2.3rem;
+    margin-bottom:15px;
+}
+
+.content p{
+    font-size:1rem;
+    opacity:0.95;
+}
+
+/* POPUP */
+
+.popup{
+    position:absolute;
+    bottom:-100%;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white;
+    color:#333;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+    transition:0.5s;
+}
+
+.popup h3{
+    font-size:2rem;
+    margin-bottom:15px;
+    color:#7b2cbf;
+}
+
+.popup p{
+    line-height:1.7;
+}
+
+.card:hover .popup{
+    bottom:0;
+}
+
+/* CARD COLORS */
+
+.art{
+    background:linear-gradient(
+        135deg,
+        #ff4d6d,
+        #ff8fa3
+    );
+}
+
+.writing{
+    background:linear-gradient(
+        135deg,
+        #7b2cbf,
+        #c77dff
+    );
+}
+
+.engineering{
+    background:linear-gradient(
+        135deg,
+        #0096c7,
+        #48cae4
+    );
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#222;
+    font-weight:600;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.7rem;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    .card{
+        width:90%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Harshita Artistry</h1>
+
+    <p class="tagline">
+        Artist by Passion • Writer by Emotion • Engineer by Ambition
+    </p>
+
+    <div class="status-box">
+        <span>Status Loading...</span>
+    </div>
+
+</header>
+
+<h2 class="section-title">Glimpses</h2>
+
+<div class="container">
+
+    <!-- ART CARD -->
+
+    <div class="card art">
+
+        <div class="content">
+            <h2>🎨 Art</h2>
+            <p>Click to explore creativity</p>
+        </div>
+
+        <div class="popup">
+            <h3>Artistic Soul</h3>
+
+            <p>
+                Colors, imagination and creativity blended beautifully into emotions and expression.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- WRITING CARD -->
+
+    <div class="card writing">
+
+        <div class="content">
+            <h2>✍ Writing</h2>
+            <p>Click to explore emotions</p>
+        </div>
+
+        <div class="popup">
+            <h3>Writer's Heart</h3>
+
+            <p>
+                Words carrying feelings, poetry and untold stories hidden inside emotions.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- ENGINEERING CARD -->
+
+    <div class="card engineering">
+
+        <div class="content">
+            <h2>💻 Engineering</h2>
+            <p>Click to explore ambition</p>
+        </div>
+
+        <div class="popup">
+            <h3>Engineering Mind</h3>
+
+            <p>
+                Innovation, logic and dreams shaping ideas into reality with ambition.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    Designed with creativity by Harshita ✨
+</footer>
+
+</body>
+</html>
